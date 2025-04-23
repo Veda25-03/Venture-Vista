@@ -1,0 +1,206 @@
+/* Animations CSS */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Fade In Down Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Slide In From Right Animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In From Left Animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Applying Animations */
+
+/* Hero Section Animations */
+.hero h1 {
+  animation: fadeInDown 1s ease;
+}
+
+.hero p {
+  animation: fadeInUp 1s ease 0.3s;
+  animation-fill-mode: both;
+}
+
+.hero .cta-btn {
+  animation: fadeInUp 1s ease 0.6s;
+  animation-fill-mode: both;
+}
+
+/* Product Card Animations */
+.product-card, .package-card, .service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover, .package-card:hover, .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Image Hover Effect */
+.product-img img, .package-img img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img img, 
+.package-card:hover .package-img img {
+  transform: scale(1.05);
+}
+
+/* Book Now Button Hover */
+.book-now-btn, .cta-btn, .submit-btn {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-now-btn:hover, .cta-btn:hover, .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Social Links Animation */
+.social-links a {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer Link Animation */
+.footer-links a {
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Modal Animations */
+.modal {
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  animation: zoomIn 0.3s ease;
+}
+
+/* Price Pulse Animation on Hover */
+.package-footer:hover .price {
+  animation: pulse 1s infinite;
+}
+
+/* Service Icon Animation */
+.service-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: translateY(-5px);
+  color: var(--secondary-color);
+}
+
+/* Nav Link Underline Animation */
+.nav-links a::after {
+  transition: width 0.3s ease;
+}
+
+/* Package Badge Animation */
+.package-badge {
+  animation: pulse 2s infinite;
+}
+
+/* Staggered Animation for Services Grid */
+.services-grid .service-card:nth-child(1) {
+  animation: fadeInUp 0.5s ease 0.1s;
+  animation-fill-mode: both;
+}
+
+.services-grid .service-card:nth-child(2) {
+  animation: fadeInUp 0.5s ease 0.2s;
+  animation-fill-mode: both;
+}
+
+.services-grid .service-card:nth-child(3) {
+  animation: fadeInUp 0.5s ease 0.3s;
+  animation-fill-mode: both;
+}
+
+.services-grid .service-card:nth-child(4) {
+  animation: fadeInUp 0.5s ease 0.4s;
+  animation-fill-mode: both;
+}
+
+.services-grid .service-card:nth-child(5) {
+  animation: fadeInUp 0.5s ease 0.5s;
+  animation-fill-mode: both;
+}
+
+.services-grid .service-card:nth-child(6) {
+  animation: fadeInUp 0.5s ease 0.6s;
+  animation-fill-mode: both;
+}

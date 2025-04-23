@@ -1,0 +1,182 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --spacing-xl: 40px;
+    --spacing-lg: 28px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero {
+    height: 80vh;
+  }
+  
+  .product-grid,
+  .package-grid,
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 32px;
+    --spacing-lg: 24px;
+    --spacing-md: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: var(--spacing-lg);
+    transition: var(--transition-normal);
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .nav-links li {
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .product-grid,
+  .package-grid,
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .service-card {
+    padding: var(--spacing-md);
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .package-details-header {
+    flex-direction: column;
+  }
+  
+  .package-details-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .package-details-price {
+    margin-top: var(--spacing-xs);
+  }
+  
+  .modal-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .hero {
+    height: 70vh;
+  }
+  
+  .cta-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+  
+  .product-grid,
+  .package-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .package-details-img {
+    height: 200px;
+  }
+  
+  .package-details-content {
+    padding: var(--spacing-md);
+  }
+  
+  .highlights-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --spacing-md: 16px;
+    --spacing-sm: 12px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .product-img,
+  .package-img {
+    height: 180px;
+  }
+}

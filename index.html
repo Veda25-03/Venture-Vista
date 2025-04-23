@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venture Vista - Explore the World</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="#" class="logo">Venture Vista</a>
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <!-- <li><a href="#products">Our Products</a></li> -->
+        <li><a href="#packages">Our Packages</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#footer">Contact</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Explore the World with Us</h1>
+      <p>Discover breathtaking destinations and create unforgettable memories</p>
+      <a href="#packages" class="cta-btn">Explore Packages</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <!-- <section id="products" class="products">
+    <div class="container">
+      <h2 class="section-title">Our Travel Essentials</h2>
+      <p class="section-subtitle">Quality gear for your adventures</p>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.pexels.com/photos/2662183/pexels-photo-2662183.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Travel Backpack">
+          </div>
+          <div class="product-info">
+            <h3>Adventure Backpack</h3>
+            <p>Durable, water-resistant backpack with multiple compartments for all your travel needs.</p>
+            <span class="price">₹2,499</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.pexels.com/photos/1778721/pexels-photo-1778721.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Travel Adapter">
+          </div>
+          <div class="product-info">
+            <h3>Universal Travel Adapter</h3>
+            <p>Compatible in over 150 countries with dual USB ports for charging multiple devices.</p>
+            <span class="price">₹1,299</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.pexels.com/photos/1546901/pexels-photo-1546901.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Camera">
+          </div>
+          <div class="product-info">
+            <h3>Compact Travel Camera</h3>
+            <p>Lightweight camera with 20MP sensor and 10x optical zoom for capturing your memories.</p>
+            <span class="price">₹15,999</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Packing Cubes">
+          </div>
+          <div class="product-info">
+            <h3>Packing Cube Set</h3>
+            <p>Set of 5 lightweight, durable packing cubes to keep your luggage organized.</p>
+            <span class="price">₹899</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Packages Section -->
+  <section id="packages" class="packages">
+    <div class="container">
+      <h2 class="section-title">Our Packages</h2>
+      <p class="section-subtitle">Curated experiences for unforgettable journeys</p>
+      
+      <div class="package-grid">
+        <div class="package-card" data-id="goa">
+          <div class="package-img">
+            <img src="https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Goa Beach">
+            <div class="package-badge">Popular</div>
+          </div>
+          <div class="package-info">
+            <h3>Beaches of Goa</h3>
+            <p>Experience the vibrant beaches and nightlife of India's most famous coastal destination.</p>
+            <div class="package-meta">
+              <span><i class="fas fa-calendar-alt"></i> 5 Days, 4 Nights</span>
+              <span><i class="fas fa-map-marker-alt"></i> North & South Goa</span>
+            </div>
+            <div class="package-footer">
+              <span class="price">₹24,999</span>
+              <button class="book-now-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="package-card" data-id="manali">
+          <div class="package-img">
+            <img src="https://static.toiimg.com/photo/115938932.cms" alt="Manali">
+          </div>
+          <div class="package-info">
+            <h3>Magical Manali</h3>
+            <p>Discover the majestic Himalayan landscapes and snowy peaks of this mountain paradise.</p>
+            <div class="package-meta">
+              <span><i class="fas fa-calendar-alt"></i> 6 Days, 5 Nights</span>
+              <span><i class="fas fa-map-marker-alt"></i> Manali, Rohtang</span>
+            </div>
+            <div class="package-footer">
+              <span class="price">₹29,999</span>
+              <button class="book-now-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="package-card" data-id="kerala">
+          <div class="package-img">
+            <img src="https://images.pexels.com/photos/4254555/pexels-photo-4254555.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kerala">
+            <div class="package-badge">Best Value</div>
+          </div>
+          <div class="package-info">
+            <h3>Kerala Backwaters</h3>
+            <p>Cruise through serene backwaters and experience the lush greenery of God's Own Country.</p>
+            <div class="package-meta">
+              <span><i class="fas fa-calendar-alt"></i> 7 Days, 6 Nights</span>
+              <span><i class="fas fa-map-marker-alt"></i> Kochi, Munnar, Alleppey</span>
+            </div>
+            <div class="package-footer">
+              <span class="price">₹32,999</span>
+              <button class="book-now-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="package-card" data-id="rajasthan">
+          <div class="package-img">
+            <img src="https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/menu/8.jpg" alt="Rajasthan">
+          </div>
+          <div class="package-info">
+            <h3>Royal Rajasthan</h3>
+            <p>Explore ancient forts, vibrant markets, and experience the royal heritage of Rajasthan.</p>
+            <div class="package-meta">
+              <span><i class="fas fa-calendar-alt"></i> 8 Days, 7 Nights</span>
+              <span><i class="fas fa-map-marker-alt"></i> Jaipur, Udaipur, Jodhpur</span>
+            </div>
+            <div class="package-footer">
+              <span class="price">₹36,999</span>
+              <button class="book-now-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Making your travel experience seamless</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Cab Rentals</h3>
+          <p>Comfortable and safe transport with experienced drivers at competitive rates.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-hotel"></i>
+          </div>
+          <h3>Hotel Booking</h3>
+          <p>Handpicked accommodations ranging from budget to luxury stays.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3>Tour Planning</h3>
+          <p>Customized itineraries tailored to your preferences and interests.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-plane"></i>
+          </div>
+          <h3>Flight Booking</h3>
+          <p>Best deals on domestic and international flights with all major airlines.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-hiking"></i>
+          </div>
+          <h3>Adventure Activities</h3>
+          <p>Exciting adventure activities with certified guides and safety equipment.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h3>Visa Assistance</h3>
+          <p>Hassle-free visa processing for all major international destinations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Venture Vista</h3>
+          <p>Your trusted travel partner since 2023. We help you discover the world's most amazing places with premium service and outstanding experiences.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Travel Lane, Mumbai, India</p>
+          <p><i class="fas fa-phone"></i> +91 9876543210</p>
+          <p><i class="fas fa-envelope"></i> info@venturevista.com</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
+        </div>
+        
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for travel tips and exclusive offers.</p>
+          <form>
+            <input type="email" placeholder="Your email address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Venture Vista. All Rights Reserved.</p>
+      </div>
+    </div>
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback-section">
+      <style>
+        .feedback-section {
+          background: #0f2b3e;
+          padding: 60px 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          font-family: 'Segoe UI', sans-serif;
+        }
+    
+        .feedback-section .container {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 16px;
+          padding: 40px;
+          max-width: 500px;
+          width: 100%;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+    
+        .section-title {
+          text-align: center;
+          color: #ffffff;
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+    
+        .section-subtitle {
+          text-align: center;
+          color: #a0c4ff;
+          margin-bottom: 30px;
+        }
+    
+        .form-group {
+          margin-bottom: 20px;
+          color: #ffffff;
+        }
+    
+        label i {
+          margin-right: 8px;
+          color: #72e5ff;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+          width: 100%;
+          padding: 12px;
+          margin-top: 6px;
+          border: none;
+          border-radius: 8px;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: rgb(0, 0, 0);
+          outline: none;
+          font-size: 14px;
+          transition: background 0.3s ease;
+        }
+    
+        input:focus,
+        textarea:focus,
+        select:focus {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+    
+        .submit-btn {
+          width: 100%;
+          background-color: #61dafb;
+          color: #000;
+          padding: 14px 20px;
+          border: none;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: transform 0.2s, background 0.3s;
+        }
+    
+        .submit-btn:hover {
+          transform: translateY(-2px);
+          background-color: #48c6ef;
+        }
+    
+        .popup-message {
+          animation: fadeIn 0.3s ease;
+        }
+    
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      </style>
+    
+      <div class="container">
+        <h2 class="section-title">We Value Your Feedback</h2>
+        <p class="section-subtitle">Help us improve your experience</p>
+    
+        <form id="feedbackForm" class="feedback-form">
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="rating"><i class="fas fa-star"></i> Rate Us</label>
+            <select id="rating" name="rating" required>
+              <option value="">Select</option>
+              <option value="5">★★★★★ - Excellent</option>
+              <option value="4">★★★★☆ - Good</option>
+              <option value="3">★★★☆☆ - Average</option>
+              <option value="2">★★☆☆☆ - Poor</option>
+              <option value="1">★☆☆☆☆ - Very Poor</option>
+            </select>
+          </div>
+    
+          <div class="form-group">
+            <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you think..." required></textarea>
+          </div>
+    
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Feedback</button>
+        </form>
+    
+        <div id="popupMessage" class="popup-message" style="display: none; margin-top: 20px; background-color: #4CAF50; color: white; padding: 15px; border-radius: 8px; text-align: center;">
+          🎉 Thank you for your feedback!
+        </div>
+      </div>
+    
+      <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("popupMessage").style.display = "block";
+          this.reset();
+          setTimeout(() => {
+            document.getElementById("popupMessage").style.display = "none";
+          }, 3000);
+        });
+      </script>
+    </section>
+    
+  </footer>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modal-package-details"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

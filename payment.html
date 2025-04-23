@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Venture Vista - Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-cyan: #00f3ff;
+      --dark-bg: #0a0e17;
+      --glass-bg: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--dark-bg);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 20% 10%, rgba(0, 243, 255, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 80% 90%, rgba(128, 0, 255, 0.15) 0%, transparent 30%);
+      animation: gradientFlow 20s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0%, 100% { background-position: 20% 10%, 80% 90%; }
+      50% { background-position: 30% 20%, 70% 80%; }
+    }
+
+    .payment-container {
+      background: var(--glass-bg);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--neon-cyan);
+      margin: 0 0 1.5rem 0;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 12px rgba(0, 243, 255, 0.25);
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .expiry-security-section {
+      margin: 1rem 0;
+    }
+
+    .section-title {
+      color: var(--neon-cyan);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+      letter-spacing: 0.05em;
+    }
+
+    .expiry-cvv-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .amount-group {
+      position: relative;
+      margin-top: 0.5rem;
+    }
+
+    .currency-symbol {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.8);
+      pointer-events: none;
+      font-size: 14px;
+    }
+
+    .amount-input {
+      padding-right: 35px !important;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--neon-cyan), #00b4d8);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.5rem;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 243, 255, 0.3);
+    }
+
+    .card-icons {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 6px;
+      opacity: 0.6;
+    }
+
+    .card-icon {
+      width: 28px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+
+    @media (max-width: 480px) {
+      .payment-container {
+        padding: 1.5rem;
+        margin: 1rem;
+        max-width: 90%;
+      }
+
+      .expiry-cvv-group {
+        gap: 0.5rem;
+      }
+
+      input {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      button {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Payment Gateway</h1>
+    <form action="payment.php" method="POST">
+      <div class="form-group">
+        <input type="text" name="fullname" placeholder="Full Name" required />
+      </div>
+      
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email Address" required />
+      </div>
+
+      <div class="form-group">
+        <input type="text" name="card" placeholder="Card Number" maxlength="16" required />
+        <div class="card-icons">
+          <div class="card-icon"></div>
+          <div class="card-icon"></div>
+        </div>
+      </div>
+
+      <div class="expiry-security-section">
+        <div class="section-title">EXPIRY & SECURITY CODE</div>
+        <div class="expiry-cvv-group">
+          <div class="form-group">
+            <input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required />
+          </div>
+          <div class="form-group">
+            <input type="text" name="cvv" placeholder="CVV" maxlength="3" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group amount-group">
+        <input type="number" name="amount" class="amount-input" placeholder="Amount" required />
+        <span class="currency-symbol">₹</span>
+      </div>
+
+      <button type="submit">
+        Confirm Payment
+      </button>
+    </form>
+  </div>
+</body>
+</html>
